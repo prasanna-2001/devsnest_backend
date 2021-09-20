@@ -1,0 +1,44 @@
+
+
+SET [key] [value] --> inserts the key-value pair
+GET [key] --> returns the value of the respective key.
+DEL [key] --> deletes the key.
+KEYS * --> lists all the keys (not their values).
+
+EXISTS [key] --> returns an integer(0/1) depending upon whether the key is present or not.
+FLUSHALL --> clears the redis contents.
+
+TTL [key] --> returns an integer that tells how much time the key will be present in the server. 
+                -1 means it is permanent.
+                -2 means it has expired i.e. no longer present.
+                non-negative values tells that how much seconds it will be present in the server.
+
+EXPIRE [key] [time] --> In how many seconds the key will expire.
+SETEX [key] [time] [value] --> inserts the key-value with the expiry time.
+
+
+lpush [key] [value...] -> inserts the values at the start of the [key] array.
+rpush [key] [value...] -> inserts the values at the end of the [key] array.
+
+lpop [key] [count: optional] -> deletes the value at the start of the [key] array.
+rpop [key] [count: optional] -> deletes the value at the end of the [key] array.
+by default count is 1.
+
+lrange [key] [start index] [end index: inclusive] -> displays the content of [key] array from the start index to end index.
+
+
+// Arrays can have duplicate values but sets don't.
+sets do not contain duplicates and are sorted (integers).
+
+SADD [key] [values...] --> Inserts the values into the set.
+SMEMBERS [key] --> displays the members of the set.
+SPOP [key] [count: optional] --> pops a random element from the set.
+
+
+// How to insert object as a key-value pair using HSET.
+
+HSET [object-name] [object-key] [object-value] --> inserts the key value pair in the object.
+HGET [object-name] [object-key] --> returns the value of the object-key.
+HGETALL [object-name] --> returns all the key-value pairs in the object.
+HDEL [object-name] [object-key] --> deletes the object-key from the object.
+HEXISTS [object-name] [object-key] --> returns integer which tells us that whether the key is present in the object or not.

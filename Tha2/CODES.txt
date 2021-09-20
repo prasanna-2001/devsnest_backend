@@ -1,0 +1,93 @@
+CREATE DATABASE Devsnest;
+
+CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+SELECT * COMPANY;
+      Table "public.company"
+  Column   |     Type      | Modifiers
+-----------+---------------+-----------
+ id        | integer       | not null
+ name      | text          | not null
+ age       | integer       | not null
+ address   | character(50) |
+ salary    | real          |
+
+//delete database command
+DROP DATABASE [ IF EXISTS ] Devsnest;
+
+//delete the table command
+DROP TABLE COMPANY;
+
+// USING SCHEMA
+
+create table myschema.company(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25),
+   SALARY   DECIMAL (18, 2),
+   PRIMARY KEY (ID)
+);
+
+
+//INSERTING VALUES IN THE TABLE
+
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (1, 'Paul', 32, 'California', 20000.00,'2001-07-13');
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (3, 'Teddy', 23, 'Norway', 20000.00, DEFAULT );
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (3, 'Teddy', 23, 'Norway', 20000.00, DEFAULT );
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00, '2007-12-13' ), (5, 'David', 27, 'Texas', 85000.00, '2007-12-13');
+
+ID        NAME        AGE        ADDRESS     SALARY	  JOIN_DATE
+----      ----------  -----      ----------  -------      --------
+1         Paul        32         California  20000.0      2001-07-13
+2         Allen       25         Texas                    2007-12-13
+3         Teddy       23         Norway      20000.0
+4         Mark        25         Rich-Mond   65000.0      2007-12-130.
+
+
+//SELECT COMMAND EXAMPLE
+
+
+
+ID        NAME        AGE        ADDRESS     SALARY	  JOIN_DATE
+----      ----------  -----      ----------  -------      --------
+1         Paul        32         California  20000.0      2001-07-13
+2         Allen       25         Texas                    2007-12-13
+3         Teddy       23         Norway      20000.0
+4         Mark        25         Rich-Mond   65000.0      2007-12-130.
+
+SELECT ID, NAME, SALARY FROM COMPANY ;
+
+ID        NAME         SALARY	  
+----      ---------   -------      
+1         Paul        20000.0     
+2         Allen                    
+3         Teddy       20000.0
+4         Mark        65000.0  
+
+
+
+//EXPRESSION EXAMPLE
+
+select * from COMPANY;
+ id | name  | age | address   | salary
+----+-------+-----+-----------+--------
+  1 | Paul  |  32 | California|  20000
+  2 | Allen |  25 | Texas     |  15000
+  3 | Teddy |  23 | Norway    |  20000
+  4 | Mark  |  25 | Rich-Mond |  65000
+  5 | David |  27 | Texas     |  85000
+  6 | Kim   |  22 | South-Hall|  45000
+  7 | James |  24 | Houston   |  10000
+
+SELECT * FROM COMPANY WHERE SALARY = 10000;
+
+ id | name  | age | address  | salary
+----+-------+-----+----------+--------
+  7 | James |  24 | Houston  |  10000
+

@@ -9,8 +9,10 @@ app.use('/', (req, res) => {
 
     // res.download(path.join(__dirname, "public/test.json"), 'hello.json')
 
-    res.sendFile(path.join(__dirname, "public/owl.jpg"))
-    res.download(path.join(__dirname, "public/owl.jpg"), 'ullu.jpg')
+    // res.sendFile(path.join(__dirname, "public/owl.jpg"))
+    // res.download(path.join(__dirname, "public/owl.jpg"), 'ullu.jpg')
+
+    
 })
 
 //it listens a port
