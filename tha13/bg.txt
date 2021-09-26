@@ -1,0 +1,15 @@
+WaterFall method :
+
+In this method the whole software get prepared and the get launched.
+1. requirement gathering 
+2. software design at very highh level 
+3. implementatipn 
+4. verification
+5. And then maintainanvce for the whole life
+
+
+
+but due to heav competition its not posible in day today life.
+ 
+
+So agile is used

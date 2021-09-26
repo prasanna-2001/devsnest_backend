@@ -1,0 +1,16 @@
+What is agile ?
+
+Process is divided into sprints
+ 
+onesprint (duration : mostly 2weeks) =>{
+    1.req gathering 
+    2.dsign 
+    3.develop 
+    4.test 
+    5.deploy 
+    6.review
+}
+
+every sprint me chote chote steps lete hai.
+
+aise karte karte choti choti cheeje ek ek  akrke dalte rahte.
